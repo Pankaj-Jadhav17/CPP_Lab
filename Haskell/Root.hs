@@ -2,28 +2,31 @@ import Text.Printf
 
 main :: IO ()
 main = do
-    putStrLn"Enter a:"
+    putStrLn "Enter a:"
     a <- readLn :: IO Double
-    putStrLn"Enter b:"
+
+    putStrLn "Enter b:"
     b <- readLn :: IO Double
-    putStrLn"Enter c:"
+
+    putStrLn "Enter c:"
     c <- readLn :: IO Double
 
-    let d = b^2 - 4*a*c
-    if d > 0 then
+    let d = b*b - 4*a*c
+
+    if d > 0 then do
         let r1 = (-b + sqrt d) / (2*a)
             r2 = (-b - sqrt d) / (2*a)
         putStrLn "Roots are real and distinct:"
-        printf "Roots: %.2f and %.2f\n" r1 r2
+        printf "Root1 = %.2f Root2 = %.2f\n" r1 r2
 
-    else if d == 0 then
+    else if d == 0 then do
         let r = -b / (2*a)
-        putStrLn"Roots are real and equal:"
-        printf"Root: %.2f\n" r
+        putStrLn "Roots are real and equal:"
+        printf "Root: %.2f\n" r
 
-    else
+    else do
         let realPart = -b / (2*a)
             imagPart = sqrt (-d) / (2*a)
         putStrLn "Roots are complex conjugates:"
-        printf "Roots1 %.2f + %.2fi\n" realPart imagPart 
-        printf "Root2 %.2f - %.2fi\n" realPart imagPart
+        printf "Root1 = %.2f + %.2fi\n" realPart imagPart
+        printf "Root2 = %.2f - %.2fi\n" realPart imagPart
