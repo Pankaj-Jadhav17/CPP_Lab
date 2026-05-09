@@ -1,14 +1,10 @@
 #include "GCDLCM.h"
-
 using namespace std;
 
-// Constructor
 GCDLCM::GCDLCM(int a, int b) {
     this->a = a;
     this->b = b;
 }
-
-// Euclid's Algorithm
 int GCDLCM::findGCD() const {
     int x = a;
     int y = b;
@@ -20,8 +16,6 @@ int GCDLCM::findGCD() const {
     }
     return x;
 }
-
-// LCM formula
 int GCDLCM::findLCM() const {
     int gcd = findGCD();
     return (a * b) / gcd;
