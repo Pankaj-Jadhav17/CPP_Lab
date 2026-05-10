@@ -14,7 +14,7 @@ display x
     | x <= 0    = "Error: Please enter a positive number!"
     | a == 0    = "Result: " ++ show i ++ " (whole number, no fraction)"
     | otherwise = "Result: " ++ show i ++ " + " ++ show a ++ "/" ++ show b ++
-                  "\n  Where I=" ++ show i ++
+                  "3\n  Where I=" ++ show i ++
                   ", A=" ++ show a ++
                   ", B=" ++ show b ++
                   "\n  A and B are co-prime (GCD = 1)"
