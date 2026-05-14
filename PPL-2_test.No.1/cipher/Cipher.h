@@ -8,9 +8,7 @@ private:
     int shift;
     string originalText;
     string resultText;
-
     char shiftChar(char c, int s) const;
-
 public:
     Cipher(const string& text, int shiftValue);
 
