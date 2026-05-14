@@ -1,6 +1,5 @@
 #ifndef CIPHER_H
 #define CIPHER_H
-
 #include <string>
 using namespace std;
 
@@ -24,5 +23,4 @@ public:
 
     void display(const string& mode) const;
 };
-
 #endif
