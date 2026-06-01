@@ -1,8 +1,6 @@
 #include "conic.h"
 #include <cmath>
-
 static bool isZero(double x) { return std::abs(x) < 1e-9; }
-
 std::string classifyConic(double a, double b, double c, double h, double g, double f) {
     double delta = a*(b*c - f*f) - h*(h*c - g*f) + g*(h*f - b*g);
     double J = a*b - h*h;
